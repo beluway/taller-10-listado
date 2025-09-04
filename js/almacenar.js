@@ -8,6 +8,14 @@
     //primero verifico que ya no exista
     let lista = JSON.parse(localStorage.getItem("lista")) || [];
 
+    lista.forEach(element => {
+
+        const li = document.createElement("li");
+         li.innerHTML=element;
+         ul.appendChild(li);
+         
+    });
+
 btnAgregar.addEventListener("click",()=>{
 
     const texto = input.value.trim();
